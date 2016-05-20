@@ -1,0 +1,84 @@
+<resources>
+    <string name="facebook_app_id">259477551072863</string>
+    <string name="app_name">FitFind</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="text_or">Or</string>
+    <string name="facebook">Facebook</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="register">\tRegister</string>
+    <string name="donot_have_account">Don\'t have an account? Register</string>
+    <string name="field_empty">Field cannot be empty</string>
+    <string name="client">Client</string>
+    <string name="trainer">Personal Trainer</string>
+
+    <string name="aggreement_text">By signing up you agree to our</string>
+    <string name="policy">Privacy Policy</string>
+    <string name="terms_services">Terms Of Services</string>
+
+    <string name="name">Name</string>
+    <string name="city">City</string>
+    <string name="goals">Goals</string>
+    <string name="trainer_preference">Trainer Preference</string>
+    <string name="speciality">Speciality</string>
+
+    <string-array name="trainers">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string-array name="client_goals">
+        <item>Weight Loss</item>
+        <item>Sports Specific</item>
+        <item>Strength Training</item>
+        <item>Rehabilitation</item>
+        <item>Functional training</item>
+        <item>Flexibility training</item>
+    </string-array>
+
+    <string-array name="trainer_speciality">
+        <item>Weight Loss</item>
+        <item>Sports Specific Training</item>
+        <item>Strength Training</item>
+        <item>Rehabilitation</item>
+        <item>Functional training</item>
+        <item>Flexibility training</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="profile_picture">Profile Picture</string>
+    <string name="personal_trainer">Personal Trainer</string>
+    <string name="fitness_class">Fitness Class</string>
+    <string name="payment">Payment</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="messages">Messages</string>
+    <string name="history">History</string>
+
+    <string name="filter_trainer">Filter Trainer</string>
+
+    <string name="distance">Distance</string>
+    <string name="filter">Filters</string>
+    <string name="distance_unit">Miles</string>
+    <string name="text_to">To</string>
+
+    <string name="mobile_trainer">MobileTrainer</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="none">None</string>
+    <string name="search">Search</string>
+    <string name="logout">Log out</string>
+
+    <string name="description">Description</string>
+    <string name="random_text">Lorem ipsum dolor sit amet, sint clita sea ex. An duo habemus complectitur, id delenit senserit argumentum mei, at eros inermis qui. Novum docendi repudiandae vis ei, doctus blandit omnesque ius no. In dicant audire mea, suas option menandri ne mea. In pri eligendi urbanitas. Usu cu iisque legimus.
+
+Ex nec laudem euripidis, vel iudico eirmod te. Wisi modus eligendi eu eum. Mel elitr deleniti te, et nec nusquam lucilius. Cu doctus ancillae vim, erat liberavisse in sit, vis an omnes veritus molestiae. An mei labore signiferumque, fabulas fabellas argumentum te nam. Ea vitae volumus hendrerit eum.
+
+Quo habeo modus mollis eu. Vix legere aperiam cu, qui ad virtute consectetuer, an sed reque noster vidisse. Oportere philosophia necessitatibus pri ex, vis eu dicta quaeque democritum. At nec laoreet luptatum. Sed malis alterum in.
+
+Vel no veritus placerat ocurreret. Oratio noluisse invenire sit eu. Volumus reformidans ex vix. Dicunt appellantur ne vix, no mel wisi porro lorem. Eum ne nihil feugiat. Modus altera at per. Vel fugit mazim at, no vivendo menandri sed, per id veniam ceteros.</string>
+
+</resources>
