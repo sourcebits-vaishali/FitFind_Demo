@@ -14,7 +14,7 @@ import com.sourcebits.fitfind.R;
 
 public class ExpandableTextView extends TextView {
     private static final int DEFAULT_TRIM_LENGTH = 200;
-    private static final String ELLIPSIS = "READ MORE.....";
+    private static final String ELLIPSIS = ".....READ MORE";
 
     private CharSequence originalText;
     private CharSequence trimmedText;

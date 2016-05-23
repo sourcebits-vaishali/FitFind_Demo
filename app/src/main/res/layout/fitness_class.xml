@@ -1,25 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     android:layout_margin="10dp"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size"
-        android:text="@string/description"
-        />
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="wrap_content"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher"
+                android:paddingEnd="0dp"
+                android:paddingStart="0dp"
+                android:paddingBottom="15dp" />
+            <Button
+                android:id="@+id/video"
+                android:padding="10dp"
+                android:paddingRight="5dp"
+                android:drawableRight="@drawable/play"
+                android:text="@string/class_video"
+                android:background="@drawable/circular_background"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
 
-    <com.sourcebits.fitfind.custom.ExpandableTextView
-        android:padding="10dp"
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size"
-        />
+        <TextView
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size"
+            android:text="@string/description"
+            />
 
+        <com.sourcebits.fitfind.custom.ExpandableTextView
+            android:padding="10dp"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            />
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:text="@string/price_of_class"
+                />
+
+            <View
+                android:id="@+id/custom_view"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/price_text"
+                />
+            <TextView
+                android:layout_toRightOf="@+id/custom_view"
+                android:id="@+id/price"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:text="$150"
+                />
+            <Button
+                android:background="@drawable/test"
+                android:id="@+id/inquiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inquiry"
+                android:layout_alignParentRight="true"
+                />
+
+            <Button
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle"
+                android:id="@+id/book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book"
+                android:layout_toLeftOf="@id/inquiry"
+                />
+
+        </RelativeLayout>
+
+        <org.lucasr.twowayview.TwoWayView
+            android:background="@drawable/rectangle"
+            android:id="@+id/lvItems"
+            style="@style/TwoWayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+</ScrollView>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fitfind ="http://schemas.android.com/apk/res-auto"
+    >
     <item
         android:id="@+id/filter_trainer_action"
         android:src="@mipmap/ic_launcher"
+        fitfind:showAsAction="always"
         android:title="@string/filter_trainer" />
 </menu>

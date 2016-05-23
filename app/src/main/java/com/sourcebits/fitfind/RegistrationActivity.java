@@ -22,7 +22,6 @@ public class RegistrationActivity extends FragmentActivity {
 
         final TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
 
-
         final ViewPager viewPager = (ViewPager)findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
