@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.sourcebits.fitfind.R;
+import com.sourcebits.fitfind.adapter.ImageAdapter;
 import com.sourcebits.fitfind.custom.ExpandableTextView;
 
 import org.lucasr.twowayview.TwoWayView;
@@ -47,7 +48,7 @@ public class FitnessClassFragment extends Fragment {
                     R.mipmap.ic_launcher));
         }
 
-        MyAdapter adapter = new MyAdapter(items);
+        ImageAdapter adapter = new ImageAdapter(getActivity(),items);
         TwoWayView lvTest = (TwoWayView) view.findViewById(R.id.lvItems);
         lvTest.setItemMargin(10);
         lvTest.setAdapter(adapter);
@@ -65,47 +66,5 @@ public class FitnessClassFragment extends Fragment {
 
         return view; //TODO - Vertical view is not visible. If we give hard coded value to its height is becomes visible
     }
-    class MyAdapter extends BaseAdapter{
 
-        private List<Bitmap> mImages;
-        public MyAdapter(List<Bitmap> images){
-            mImages = images;
-        }
-
-        @Override
-        public int getCount() {
-            return mImages.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return mImages.size();
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder;
-            if(null == convertView){
-                convertView = convertView.inflate(getActivity() , R.layout.two_way , null);
-                holder = new ViewHolder();
-
-                holder.img = (ImageView)convertView.findViewById(R.id.image);
-                convertView.setTag(holder);
-            } else {
-                holder = (ViewHolder)convertView.getTag();
-            }
-            holder.img.setImageBitmap(mImages.get(position));
-
-            return convertView;
-        }
-
-        class ViewHolder{
-            ImageView img;
-        }
-    }
 }

@@ -9,8 +9,6 @@
         android:id="@+id/user_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:background="@drawable/circular_background"
         android:adjustViewBounds="true"
         android:contentDescription="@string/app_name"
         />
@@ -30,7 +28,9 @@
             android:text="Michal Jakson"
             />
         <TextView
+            android:drawableLeft="@drawable/loc_icon"
             android:textSize="@dimen/text_size"
+            android:gravity="center"
             android:id="@+id/user_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

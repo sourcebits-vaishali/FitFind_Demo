@@ -2,10 +2,12 @@ package com.sourcebits.fitfind.model;
 
 import android.graphics.Bitmap;
 
+import java.io.Serializable;
+
 /**
  * Created by vaishaliarora on 19/05/16.
  */
-public class TrainerDetails {
+public class TrainerDetails implements Serializable {
 
     private String mName;
     private String mLocation;

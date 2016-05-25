@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sourcebits.fitfind.R;
+import com.sourcebits.fitfind.custom.CircularImageClass;
 import com.sourcebits.fitfind.model.TrainerDetails;
 
 import java.util.ArrayList;
@@ -50,11 +51,12 @@ public class TrainerAdapter extends RecyclerView.Adapter<TrainerAdapter.DataView
         holder.mTrainerDistance.setText(""+item.getDistance() + mContext.getResources().getString(R.string.distance_unit));
 
         Bitmap bm = BitmapFactory.decodeResource(mContext.getResources(),
-                R.mipmap.ic_launcher);
+                R.drawable.download);
         Bitmap resized = Bitmap.createScaledBitmap(bm, 100, 100, true);
-        Bitmap conv_bm = getRoundedShape(resized);
-        holder.mTrainerPicture.setImageBitmap(conv_bm);
-
+        Bitmap conv_bm = CircularImageClass.getRoundedShape(resized, 80 ,80);
+        if(conv_bm != null) {
+            holder.mTrainerPicture.setImageBitmap(conv_bm);
+        }
     }
 
     @Override
@@ -76,29 +78,6 @@ public class TrainerAdapter extends RecyclerView.Adapter<TrainerAdapter.DataView
         }
     }
 
-    public Bitmap getRoundedShape(Bitmap scaleBitmapImage) {
-        int targetWidth = 50;
-        int targetHeight = 50;
-        Bitmap targetBitmap = Bitmap.createBitmap(targetWidth,
-                targetHeight,Bitmap.Config.ARGB_8888);
-
-        Canvas canvas = new Canvas(targetBitmap);
-        Path path = new Path();
-        path.addCircle(((float) targetWidth - 1) / 2,
-                ((float) targetHeight - 1) / 2,
-                (Math.min(((float) targetWidth),
-                        ((float) targetHeight)) / 2),
-                Path.Direction.CCW);
-
-        canvas.clipPath(path);
-        Bitmap sourceBitmap = scaleBitmapImage;
-        canvas.drawBitmap(sourceBitmap,
-                new Rect(0, 0, sourceBitmap.getWidth(),
-                        sourceBitmap.getHeight()),
-                new Rect(0, 0, targetWidth,
-                        targetHeight), null);
-        return targetBitmap;
-    }
 
     public void update(List<TrainerDetails> aFiles) {
         if (aFiles == null) return;

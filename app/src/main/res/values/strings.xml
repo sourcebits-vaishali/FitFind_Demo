@@ -58,6 +58,8 @@
     <string name="messages">Messages</string>
     <string name="history">History</string>
 
+    <string name="menu_search">Search</string>
+    <string name="search_hint">Search by name</string>
     <string name="filter_trainer">Filter Trainer</string>
 
     <string name="distance">Distance</string>
@@ -85,4 +87,5 @@ Vel no veritus placerat ocurreret. Oratio noluisse invenire sit eu. Volumus refo
     <string name="book">Book</string>
     <string name="inquiry">\?</string>
     <string name="class_video">Class Video</string>
+    <string name="chat">Chat</string>
 </resources>

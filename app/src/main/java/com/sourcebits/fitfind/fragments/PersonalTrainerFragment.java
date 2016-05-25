@@ -1,5 +1,7 @@
 package com.sourcebits.fitfind.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -8,12 +10,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.sourcebits.fitfind.R;
+import com.sourcebits.fitfind.TrainerDetailActivity;
 import com.sourcebits.fitfind.adapter.TrainerAdapter;
+import com.sourcebits.fitfind.custom.RecyclerItemClickListener;
 import com.sourcebits.fitfind.model.DummyData;
 import com.sourcebits.fitfind.model.TrainerDetails;
 
@@ -49,6 +55,16 @@ public class PersonalTrainerFragment extends Fragment {
         mAdapter = new TrainerAdapter(getActivity() , mElements);
         list.setAdapter(mAdapter);
 
+        list.addOnItemTouchListener(
+                new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        Intent intent = new Intent(getActivity(), TrainerDetailActivity.class);
+                        intent.putExtra("Details", mElements.get(position));
+                        startActivity(intent);
+                    }
+                }));
+
         return view;
     }
 
@@ -79,6 +95,7 @@ public class PersonalTrainerFragment extends Fragment {
             }
         }
     }
+
     public void updateList(List<TrainerDetails> newElements){
         mElements.clear();
         mElements = newElements;
